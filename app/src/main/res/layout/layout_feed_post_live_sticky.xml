@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/common_black" android:paddingTop="15dp" android:paddingBottom="15dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/shape_news_feed_topic" android:layout_width="match_parent" android:layout_height="45dp" android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+        <com.blued.android.core.imagecache.view.RoundedImageView android:id="@+id/iv_header_view" android:focusable="true" android:clickable="true" android:layout_width="42dp" android:layout_height="42dp" android:scaleType="centerCrop" android:contentDescription="@string/app_name" app:corner_radius="21dp"/>
+        <TextView android:textAppearance="@style/TextAppearance.FontPath.Regular" android:textSize="12sp" android:textColor="@color/common_gray_747593" android:ellipsize="end" android:gravity="center_vertical" android:id="@+id/tv_edit_feed" android:paddingLeft="20dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/share_your_thoughts" android:lines="1" android:layout_weight="1"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="0">
+            <ImageView android:gravity="center_vertical" android:id="@+id/iv_add_feed" android:paddingLeft="15dp" android:paddingRight="15dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/icon_feed_sticky_camera"/>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/ll_open_live" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <View android:background="#e5e5e5" android:layout_width="0.5dp" android:layout_height="20dp"/>
+                <TextView android:textSize="15sp" android:textColor="@color/common_text_gray_light2" android:gravity="center_vertical" android:id="@+id/tv_open_live" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="15dp" android:text="@string/live_text_live" android:drawableLeft="@drawable/icon_feed_sticky_title_open_live" android:drawablePadding="8dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

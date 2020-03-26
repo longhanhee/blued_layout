@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply from: "config.gradle"
 
 android {
     compileSdkVersion 29
@@ -31,4 +32,14 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.1'
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    implementation rootProject.ext.dependencies["constraint-layout"]
+    implementation rootProject.ext.dependencies["appcompat-v7"]
+    implementation rootProject.ext.dependencies["design"]
+    implementation rootProject.ext.dependencies["cardview-v7"]
+    implementation rootProject.ext.dependencies["support-annotations"]
+    implementation rootProject.ext.dependencies["recyclerview-v7"]
+    implementation rootProject.ext.dependencies["support-vector-drawable"]
+    implementation rootProject.ext.dependencies["palette-v7"]
 }

@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fl_operation_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <FrameLayout
+        android:id="@+id/live_top_root"
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:layout_marginLeft="10dp"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="250dp"
+            android:layout_height="36dp"
+            android:layout_gravity="bottom"
+             />
+
+        <LinearLayout
+            android:id="@+id/live_top_left_area"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="3dp"
+                android:paddingBottom="3dp">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/header_view"
+                    android:layout_width="@dimen/msg_live_profile_height"
+                    android:layout_height="@dimen/msg_live_profile_height"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/user_bg_round_black"
+                    android:clickable="true"
+                    android:contentDescription="@string/app_name"
+                    android:focusable="true"
+                    android:scaleType="centerCrop"
+                    app:corner_radius="15dp" />
+
+                <ImageView
+                    android:id="@+id/header_pendant_circle_view"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="bottom"
+                    android:src="@drawable/icon_live_header_pendant_circle"
+                    android:visibility="invisible" />
+
+                <ImageView
+                    android:id="@+id/img_verify"
+                    android:layout_width="@dimen/msg_live_profile_v_height"
+                    android:layout_height="@dimen/msg_live_profile_v_height"
+                    android:layout_gravity="bottom|right|center_vertical|center_horizontal|center"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/v_round_corp"
+                    android:contentDescription="@string/imagefailed_exception"
+                    android:visibility="invisible" />
+
+                <ImageView
+                    android:id="@+id/header_pendant_view"
+                    android:layout_width="18dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="17dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/icon_live_header_pendant"
+                    android:visibility="invisible" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="12dp"
+                android:orientation="vertical"
+                android:paddingTop="4dp">
+
+                <TextView
+                    android:id="@+id/name_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:maxLines="1"
+                    android:textColor="@color/white"
+                    android:textSize="13sp" />
+
+                <LinearLayout
+                    android:id="@+id/onlive_count_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/live_top_root"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/online_all_count_icon" />
+
+                    <TextView
+                        android:id="@+id/onlive_all_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:text="0"
+
+                        android:textColor="@color/white"
+                        android:textSize="10sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/live_follow_anchor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="12dp"
+                android:paddingTop="2dp"
+                android:src="@drawable/play_online_plus" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/live_msg_hListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/close_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="0"
+                android:paddingLeft="6dp"
+                android:paddingRight="13dp"
+                android:src="@drawable/live_close_btn_icon" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/onlive_current_level_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/live_top_root"
+        android:layout_marginTop="7dp"
+        android:layout_marginRight="10dp">
+
+        <LinearLayout
+            android:id="@+id/ll_level_and_beans_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="6dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/onlive_level_container"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="6dp"
+                android:paddingRight="10dp"
+                android:visibility="gone"
+                app:corner_radius="10dp"
+                app:endColor="#99091133"
+                app:oblique_angle="3"
+                app:startColor="#99091133"
+                app:triangle_width="9dp">
+
+                <com.blued.android.core.imagecache.view.AutoAttachRecyclingImageView
+                    android:id="@+id/live_level_icon"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginRight="5dp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/live_level_desc_0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:elevation="1dp"
+                    android:text="LV.0"
+                    android:textAppearance="@style/TextAppearance.FontPath.Bold"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:visibility="gone" />
+
+                <com.blued.international.ui.live.bizview.LevelProgressBar
+                    android:id="@+id/live_level_progressbar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="47dp"
+                    android:layout_height="6dp"
+                    android:layout_centerHorizontal="true"
+                    android:max="100"
+                    android:progress="60"
+                    android:progressDrawable="@drawable/progress_horizontal" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/live_level_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:elevation="1dp"
+                    android:text="1111"
+                    android:textAppearance="@style/TextAppearance.FontPath.Bold"
+                    android:textColor="@color/white"
+                    android:textSize="10dp" />
+            </com.blued.international.ui.live.bizview.ObliqueLinearLayout>
+
+            <com.blued.international.ui.live.bizview.ObliqueLinearLayout
+                android:id="@+id/onlive_current_beans_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                app:corner_radius="10dp"
+                app:endColor="#99091133"
+                app:startColor="#99091133"
+                app:triangle_width="9dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/pay_beans" />
+
+                <TextView
+                    android:id="@+id/onlive_current_beans"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="6dp"
+                    android:textAppearance="@style/TextAppearance.FontPath.Bold"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="7dp"
+                    android:src="@drawable/bean_more" />
+            </com.blued.international.ui.live.bizview.ObliqueLinearLayout>
+        </com.blued.android.similarity.view.shape.ShapeLinearLayout>
+
+        <ImageView
+            android:id="@+id/play_online_watermark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/live_watermark_icon" />
+    </RelativeLayout>
+
+    <com.blued.international.ui.live.bizview.RTCUserInfoLayout
+        android:id="@+id/rtc_user_info_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/onlive_current_level_layout"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="1dp"
+        android:visibility="gone" />
+
+    <com.blued.international.ui.live.bizview.HornLinearLayout
+        android:id="@+id/horn_container"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_below="@+id/rtc_user_info_layout"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/icon_horn" />
+
+        <com.blued.international.ui.live.bizview.TipView
+            android:id="@+id/horn_text"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </com.blued.international.ui.live.bizview.HornLinearLayout>
+
+    <LinearLayout
+        android:id="@+id/input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="6dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/share_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/live_share_btn" />
+
+            <include
+                layout="@layout/include_msg_live_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="11.5dp"
+                android:layout_toLeftOf="@+id/share_view" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/keyboard_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/live_gift_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/input_layout"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="7dp"
+        android:background="@drawable/live_gift_default" />
+
+    <ImageView
+        android:id="@+id/live_fans_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/live_gift_view"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="7dp"
+        android:background="@drawable/icon_live_recording_fan_start" />
+
+    <LinearLayout
+        android:id="@+id/ll_guide_fan_club_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/live_fans_view"
+        android:layout_alignParentRight="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/ll_attention_guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/icon_live_helper_bg"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/dp_10">
+
+            <TextView
+                android:id="@+id/tv_helper_content_fan_club_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="200dp"
+                android:padding="@dimen/dp_10"
+                android:text="@string/live_fan_helper_hint_2"
+                android:textAppearance="@style/TextAppearance.FontPath.Medium"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:visibility="visible" />
+
+            <com.blued.android.similarity.view.shape.ShapeTextView
+                android:id="@+id/tv_join_fan_club"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:drawableRight="@drawable/icon_live_guide_right"
+                android:drawablePadding="2dp"
+                android:padding="5dp"
+                android:text="@string/live_fan_join"
+                android:textAppearance="@style/TextAppearance.FontPath.Medium"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                app:corner_radius="2dp"
+                app:stroke_color="@color/white"
+                app:stroke_width="1dp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_helper_fan_club_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="22dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/icon_live_helper_triangle"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <com.blued.international.customview.BadgeView
+        android:id="@+id/approach_gift_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="2.5dp"
+        android:background="@color/white"
+        android:textColor="#ff0972"
+        android:textSize="10sp" />
+
+    <include
+        android:id="@+id/live_msg_main_root"
+        layout="@layout/live_msg_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/input_layout"
+        android:layout_below="@+id/horn_container"
+        android:layout_marginBottom="5dp" />
+
+    <LinearLayout
+        android:id="@+id/fl_progressview"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <com.blued.international.ui.live.bizview.BoxProgressView
+            android:id="@+id/box_progressview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_entrance_effect"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/input_layout"
+        android:layout_below="@+id/horn_container"
+        android:layout_marginBottom="5dp"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.3" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="235dp"
+            android:layout_weight="0" />
+
+        <FrameLayout
+            android:id="@+id/entrance_effect_container"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_weight="0" />
+
+        <View
+            android:layout_width="100dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.7" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/chat_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/live_chat_btn"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/float_window_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/live_float_btn"
+        android:visibility="gone" />
+
+    <com.blued.international.ui.live.bizview.LiveFanClubUpLevelNoticeView
+        android:id="@+id/fan_club_up_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="140dp" />
+
+    <com.blued.international.ui.live.bizview.AspectLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/input_layout">
+
+        <com.blued.international.customview.BubbleLayout
+            android:id="@+id/ll_bubble"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="53dp" />
+    </com.blued.international.ui.live.bizview.AspectLayout>
+</RelativeLayout>

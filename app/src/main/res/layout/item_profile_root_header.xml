@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_151515">
+
+    <FrameLayout
+        android:id="@+id/fl_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="@drawable/icon_profile_avatar_cover">
+
+        <com.blued.android.core.imagecache.view.AutoAttachRecyclingImageView
+            android:id="@+id/img_header"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon_profile_defailt_avatar" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/user_avatar_audit_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#b3131423"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/icon_user_audit_mark_big"
+            android:clickable="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/avatar_audit_tips"
+            android:textAppearance="@style/TextAppearance.FontPath.Regular"
+            android:textColor="@color/color_8d8d8e"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_avatar_loading_failed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/icon_profile_avatar_loading_failed" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_header_loading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/profile_header_loading">
+
+        <ImageView
+            android:id="@+id/iv_light_line"
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="-187dp"
+            android:background="@drawable/light_line"
+            android:rotation="45"
+            android:transformPivotX="-80dp"
+            android:translationY="80dp" />
+    </FrameLayout>
+</FrameLayout>
