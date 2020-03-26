@@ -172,26 +172,22 @@
                 android:paddingLeft="6dp"
                 android:paddingRight="10dp"
                 android:visibility="gone"
-                app:corner_radius="10dp"
-                app:endColor="#99091133"
-                app:oblique_angle="3"
-                app:startColor="#99091133"
-                app:triangle_width="9dp">
+                >
 
-                <com.blued.android.core.imagecache.view.AutoAttachRecyclingImageView
+                <ImageView
                     android:id="@+id/live_level_icon"
                     android:layout_width="16dp"
                     android:layout_height="16dp"
                     android:layout_marginRight="5dp" />
 
-                <androidx.appcompat.widget.AppCompatTextView
+                <TextView
                     android:id="@+id/live_level_desc_0"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="5dp"
                     android:elevation="1dp"
                     android:text="LV.0"
-                    android:textAppearance="@style/TextAppearance.FontPath.Bold"
+
                     android:textColor="@color/white"
                     android:textSize="10sp"
                     android:visibility="gone" />
@@ -216,9 +212,9 @@
                     android:textAppearance="@style/TextAppearance.FontPath.Bold"
                     android:textColor="@color/white"
                     android:textSize="10dp" />
-            </com.blued.international.ui.live.bizview.ObliqueLinearLayout>
+            </LinearLayout>
 
-            <com.blued.international.ui.live.bizview.ObliqueLinearLayout
+            <LinearLayout
                 android:id="@+id/onlive_current_beans_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="20dp"
@@ -226,10 +222,7 @@
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
                 android:paddingLeft="10dp"
-                app:corner_radius="10dp"
-                app:endColor="#99091133"
-                app:startColor="#99091133"
-                app:triangle_width="9dp">
+                >
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -243,7 +236,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
                     android:layout_marginRight="6dp"
-                    android:textAppearance="@style/TextAppearance.FontPath.Bold"
                     android:textColor="@color/white"
                     android:textSize="10sp" />
 
@@ -252,8 +244,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="7dp"
                     android:src="@drawable/bean_more" />
-            </com.blued.international.ui.live.bizview.ObliqueLinearLayout>
-        </com.blued.android.similarity.view.shape.ShapeLinearLayout>
+            </LinearLayout>
+        </LinearLayout>
 
         <ImageView
             android:id="@+id/play_online_watermark"

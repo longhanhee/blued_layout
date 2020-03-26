@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/live_msg_edit"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/live_msg_edit_chat_bg"
+        android:background="@color/black"
+        android:layout_width="49dp"
+        android:layout_height="37dp">
+
+        <ImageView
+            android:id="@+id/live_msg_edit_chat_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="13dp"
+            android:src="@drawable/live_chat_normal_active"
+            android:textSize="10sp" />
+    </RelativeLayout>
+
+    <com.blued.international.ui.live.bizview.LiveChatMiddleRelativeLayout
+        android:id="@+id/live_msg_edit_danmu_bg"
+        android:layout_width="53dp"
+        android:layout_height="37dp"
+        android:layout_marginLeft="-15dp"
+        app:endColor="#8f010818"
+        app:startColor="#8f010818">
+
+        <ImageView
+            android:id="@+id/live_msg_edit_danmu_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/toggle_danmaku_off"
+            android:textSize="10sp" />
+
+        <ImageView
+            android:id="@+id/iv_red_dot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="@dimen/dp_10"
+            android:src="@drawable/red_dot"
+            android:visibility="gone" />
+    </com.blued.international.ui.live.bizview.LiveChatMiddleRelativeLayout>
+
+    <com.blued.international.ui.live.bizview.LiveChatRightLinearLayout
+        android:id="@+id/live_msg_edit_input_bg"
+        android:layout_width="0dp"
+        android:layout_height="37dp"
+        android:layout_marginLeft="-15dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        app:endColor="#8f010818"
+        app:startColor="#8f010818">
+
+        <com.blued.international.customview.emoji.view.EmojiEditText
+            android:id="@+id/live_msg_send_edit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="@string/live_chat_input_hint"
+            android:imeOptions="actionUnspecified|flagNoFullscreen|flagNoExtractUi"
+            android:inputType="textMultiLine"
+            android:maxLength="64"
+            android:maxLines="4"
+            android:paddingLeft="16dp"
+            android:textAppearance="@style/TextAppearance.FontPath.Medium"
+            android:textColor="@color/white"
+            android:textColorHint="#80ffffff"
+            android:textSize="13sp"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/live_msg_send_to"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            android:src="@drawable/icon_edit_feed_send"
+            android:visibility="visible" />
+    </com.blued.international.ui.live.bizview.LiveChatRightLinearLayout>
+</LinearLayout>
