@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:state_pressed="true" android:drawable="@drawable/shape_msg_send_photo_press"/>
+    <item android:state_window_focused="false" android:drawable="@drawable/shape_msg_send_photo"/>
+    <item android:state_window_focused="true" android:drawable="@drawable/shape_msg_send_photo"/>
+</selector>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:gravity="center_horizontal" android:id="@android:id/background" android:drawable="@drawable/icon_live_pk_box_progress_bg"/>
+    <item android:id="@android:id/progress" android:left="0.5dp" android:top="0.5dp" android:right="0.5dp" android:bottom="0.5dp">
+        <scale android:drawable="@drawable/icon_live_pk_box_progress_first" android:scaleWidth="100%"/>
+    </item>
+</layer-list>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:oneshot="false">
+    <item android:duration="30" android:drawable="@drawable/circle_loading1"/>
+    <item android:duration="30" android:drawable="@drawable/circle_loading2"/>
+    <item android:duration="30" android:drawable="@drawable/circle_loading3"/>
+    <item android:duration="30" android:drawable="@drawable/circle_loading4"/>
+    <item android:duration="30" android:drawable="@drawable/circle_loading5"/>
+    <item android:duration="30" android:drawable="@drawable/circle_loading6"/>
+    <item android:duration="30" android:drawable="@drawable/circle_loading7"/>
+    <item android:duration="30" android:drawable="@drawable/circle_loading8"/>
+    <item android:duration="30" android:drawable="@drawable/circle_loading9"/>
+    <item android:duration="30" android:drawable="@drawable/circle_loading10"/>
+    <item android:duration="30" android:drawable="@drawable/circle_loading11"/>
+    <item android:duration="30" android:drawable="@drawable/circle_loading12"/>
+    <item android:duration="30" android:drawable="@drawable/circle_loading13"/>
+    <item android:duration="30" android:drawable="@drawable/circle_loading14"/>
+    <item android:duration="30" android:drawable="@drawable/circle_loading15"/>
+    <item android:duration="30" android:drawable="@drawable/circle_loading16"/>
+    <item android:duration="30" android:drawable="@drawable/circle_loading17"/>
+    <item android:duration="30" android:drawable="@drawable/circle_loading18"/>
+    <item android:duration="30" android:drawable="@drawable/circle_loading19"/>
+    <item android:duration="30" android:drawable="@drawable/circle_loading20"/>
+    <item android:duration="30" android:drawable="@drawable/circle_loading21"/>
+    <item android:duration="30" android:drawable="@drawable/circle_loading22"/>
+</animation-list>

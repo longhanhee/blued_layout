@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:state_selected="true" android:drawable="@drawable/img_live_beauty_checked"/>
+    <item android:state_selected="false" android:drawable="@drawable/img_live_beauty_uchecked"/>
+    <item android:drawable="@drawable/img_live_beauty_uchecked"/>
+</selector>

@@ -1,0 +1,2 @@
+rootProject.name='blued_layout'
+include ':app'
