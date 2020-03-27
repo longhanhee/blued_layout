@@ -34,12 +34,18 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.1'
     implementation 'com.makeramen:roundedimageview:2.3.0'
-    implementation rootProject.ext.dependencies["constraint-layout"]
-    implementation rootProject.ext.dependencies["appcompat-v7"]
-    implementation rootProject.ext.dependencies["design"]
-    implementation rootProject.ext.dependencies["cardview-v7"]
-    implementation rootProject.ext.dependencies["support-annotations"]
-    implementation rootProject.ext.dependencies["recyclerview-v7"]
-    implementation rootProject.ext.dependencies["support-vector-drawable"]
-    implementation rootProject.ext.dependencies["palette-v7"]
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-beta4'
+    implementation "androidx.appcompat:appcompat:1.1.0"
+    implementation "com.google.android.material:material:1.1.0"
+    implementation "androidx.cardview:cardview:1.0.0"
+    implementation "androidx.recyclerview:recyclerview:1.1.0"
+    implementation "androidx.vectordrawable:vectordrawable:1.1.0"
+    implementation "androidx.palette:palette:1.0.0"
+    implementation "androidx.annotation:annotation:1.1.0"
+    // implementation rootProject.ext.dependencies["design"]
+    // implementation rootProject.ext.dependencies["cardview-v7"]
+    // implementation rootProject.ext.dependencies["support-annotations"]
+    // implementation rootProject.ext.dependencies["recyclerview-v7"]
+    // implementation rootProject.ext.dependencies["support-vector-drawable"]
+    // implementation rootProject.ext.dependencies["palette-v7"]
 }
